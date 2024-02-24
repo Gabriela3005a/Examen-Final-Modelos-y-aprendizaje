@@ -3,7 +3,7 @@ Modelo que sea capaz de identificar si un paciente tiene o no cáncer
 
 # Datos de la base
 1) Número de identificación 
-2) Diagnóstico (M = maligno, B = benigno) 
+2) Diagnóstico (M = maligno, B = benigno)
 3-32) Se calculan diez características de valor real para cada núcleo celular: 
 a) radio (media de distancias desde el centro a puntos en el perímetro) b) textura (desviación estándar de los valores de escala de grises) 
 c) perímetro 
