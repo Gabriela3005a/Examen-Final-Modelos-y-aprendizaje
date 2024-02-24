@@ -18,15 +18,15 @@ i) simetría
 Crear mínimo 3 modelo que sea capaz de identificar si un paciente tiene o no cáncer
 Decidir cuál es el mejor modelo justificando la respuesta en base a las matrices de confusión que aparecen al evaluar el error en training y en test
 
-## Nº 1 RANDOM FOREST 
-# RAZONES DEL USO DEL MODELO:
+# Nº 1 RANDOM FOREST 
+## RAZONES DEL USO DEL MODELO:
 El modelo Random Forest comúnmente es utilizado en problemas de clasificación como la identificación de cáncer por varias razones:
 - Alta precisión : Random Forest es conocido por su alta precisión en la clasificación, incluso en conjuntos de datos complejos y de alta dimensionalidad como el que podría surgir en el diagnóstico del cáncer, Random Forest reduce el sobreajuste y produce resultados más precisos.
 - Robustez frente al sobreajuste: Los modelos de Random Forest tienden a ser menos propensos al sobreajuste en comparación con un solo árbol de decisión, especialmente en conjuntos de datos con muchas características. 
 - Manejo eficiente de características: Random Forest es capaz de manejar conjuntos de datos con muchas características sin necesidad de reducción de dimensionalidad previa. 
 - Tolerancia a datos desequilibrados: En problemas de diagnóstico de cáncer, es común que los datos estén desequilibrados, es decir, que haya muchas más muestras de una clase que de la otra. Random Forest puede manejar esta desigualdad de manera efectiva y producir resultados equilibrados sin requerir técnicas de reequilibrio de datos.
 - Identificación de características importantes: Random Forest puede proporcionar una medida de la importancia de cada característica en la clasificación, lo que puede ayudar a los médicos y expertos en salud a comprender qué características son más relevantes para el diagnóstico del cáncer.
-# PROCEDIMIENTO DEL MODELO:
+## PROCEDIMIENTO DEL MODELO:
 Importaciones de bibliotecas: Importamos las bibliotecas necesarias para el análisis de datos y el modelado predictivo, incluyendo herramientas como Pandas, Scikit-learn, Imbalanced-learn (para la generación de datos sintéticos en el manejo de clases desbalanceadas) y Matplotlib y Seaborn para la visualización.
 División de datos: Las características (X) y las etiquetas (y) se definen utilizando el conjunto de datos. Las características son todas las columnas excepto 'ID number' y 'Diagnosis', mientras que las etiquetas son la columna 'Diagnosis'.
 Los datos se dividen en conjuntos de entrenamiento y prueba utilizando train_test_split(). Se asigna el 80% de los datos para entrenamiento y el 20% restante para pruebas.
@@ -40,15 +40,15 @@ Evaluación del modelo en el conjunto de prueba: Se realizan predicciones en el 
 “Las métricas indican que el modelo tiene una precisión del 95.45%, un puntaje F1 del 96.55% y un AUC-ROC del 97.43%, lo que sugiere un buen rendimiento en la clasificación de los casos de cáncer en el conjunto de prueba.”
 Se visualizan las matrices de confusión para el conjunto de entrenamiento y prueba.
 
-## Nº 2 REGRESION LOGISTICA 
-# RAZONES DEL USO DEL MODELO:
+# Nº 2 REGRESION LOGISTICA 
+## RAZONES DEL USO DEL MODELO:
 - Interpretación sencilla: La regresión logística produce resultados que son fácilmente interpretables. La salida está en forma de probabilidades que representan la probabilidad de que un punto de datos pertenezca a una clase en particular. Además, los coeficientes asociados a cada característica proporcionan información sobre cómo esa característica contribuye a la predicción.
 - Eficiencia computacional: La regresión logística es computacionalmente eficiente y rápida de entrenar, especialmente en comparación con modelos más complejos como los árboles de decisión o las redes neuronales. Esto es útil cuando se trabaja con grandes conjuntos de datos o se necesita un modelo que se pueda entrenar rápidamente.
 - Manejo natural de características binarias y numéricas: La regresión logística es capaz de manejar tanto características categóricas como numéricas sin necesidad de transformación adicional. Esto es útil cuando se trabaja con conjuntos de datos que contienen una combinación de tipos de características.
 - Regularización incorporada: La regresión logística tiene la capacidad de manejar el sobreajuste a través de técnicas de regularización como la regresión L1 (Lasso) y la regresión L2 (Ridge). Estas técnicas ayudan a evitar que el modelo se ajuste demasiado a los datos de entrenamiento, lo que mejora su capacidad para generalizar a nuevos datos.
 - Buena para conjuntos de datos linealmente separables: Si los datos son linealmente separables, es decir, si se pueden separar utilizando una línea recta en el espacio de características, la regresión logística puede ser muy efectiva.
 - Manejo natural de probabilidades: La regresión logística produce predicciones en forma de probabilidades, lo que facilita la interpretación y la toma de decisiones basadas en umbrales de probabilidad.
-# PROCEDIMIENTO DEL MODELO:
+## PROCEDIMIENTO DEL MODELO:
 Importaciones de bibliotecas: Importamos las bibliotecas necesarias para el análisis de datos, la construcción del modelo y la evaluación del rendimiento, incluyendo Scikit-learn, Pandas y Matplotlib.
 Definición de características y etiquetas: Se definen las características (X) como todas las columnas excepto 'ID number' y 'Diagnosis', y las etiquetas (y) como la columna 'Diagnosis' del conjunto de datos.
 División de datos en conjuntos de entrenamiento y prueba: Se utilizan train_test_split() para dividir los datos en conjuntos de entrenamiento y prueba en una proporción del 80% para entrenamiento y 20% para pruebas. Esto proporciona datos independientes para entrenar y evaluar el modelo.
@@ -61,8 +61,8 @@ Impresión de métricas de evaluación: Se imprimen las métricas de evaluación
 Obtención de matrices de confusión: Se obtienen matrices de confusión tanto para el conjunto de entrenamiento como para el conjunto de prueba utilizando confusion_matrix().
 Visualización de matrices de confusión: Se visualizan las matrices de confusión usando heatmap() de Seaborn para proporcionar una representación gráfica de las predicciones del modelo en comparación con las etiquetas reales.
 
-## Nº 3 RED NEURONAL 
-# RAZONES DEL USO DEL MODELO:
+# Nº 3 RED NEURONAL 
+## RAZONES DEL USO DEL MODELO:
 - Capacidad para aprender representaciones complejas: Las redes neuronales pueden aprender representaciones complejas de los datos, lo que les permite
 capturar relaciones no lineales y patrones sutiles en los conjuntos de datos médicos. Esto es crucial en problemas como la detección de cáncer, donde
 las características pueden estar altamente interconectadas y no linealmente separables.
@@ -75,7 +75,7 @@ convolucionales (CNN) para procesar imágenes médicas o redes neuronales recurr
 - Capacidad para manejar grandes volúmenes de datos: Las redes neuronales pueden manejar grandes conjuntos de datos con eficacia, lo que es importante en el diagnóstico del cáncer, donde pueden haber miles o incluso millones de pacientes con múltiples características observadas.
 - Aprendizaje jerárquico y abstracción de características: Las redes neuronales pueden aprender automáticamente características jerárquicas y abstracciones de los datos, lo que les permite identificar características relevantes para la predicción del cáncer sin necesidad de una ingeniería de características manual.
 - Regularización y prevención del sobreajuste: Las redes neuronales pueden aplicar técnicas de regularización como la disminución del aprendizaje, la eliminación de características y el abandono para prevenir el sobreajuste y mejorar la generalización del modelo.
-# PROCEDIMIENTO DEL MODELO:
+## PROCEDIMIENTO DEL MODELO:
 Importación de bibliotecas: Se importan las bibliotecas necesarias, incluyendo Keras, TensorFlow, Matplotlib y Scikit-learn.
 Eliminación de columnas irrelevantes: Se elimina la columna 'ID number', ya que no es relevante para el modelo.
 Codificación de etiquetas categóricas: Se utiliza LabelEncoder para convertir la columna 'Diagnosis' en valores numéricos.
@@ -90,15 +90,15 @@ Evaluación del modelo en el conjunto de prueba: Se evalúa el modelo en el conj
 Visualización de matrices de confusión: Se calculan las matrices de confusión para el conjunto de entrenamiento y prueba utilizando confusion_matrix().
 Las matrices de confusión:  se visualizan utilizando heatmap() de Seaborn para proporcionar una representación gráfica de las predicciones del modelo en comparación con las etiquetas reales.
 
-## Nº 4 DECISIONTREECLASSIFIER
-# RAZONES DEL USO DEL MODELO:
+# Nº 4 DECISIONTREECLASSIFIER
+## RAZONES DEL USO DEL MODELO:
 - Interpretabilidad: Los árboles de decisión son modelos altamente interpretables. Esto significa que se pueden visualizar y comprender fácilmente, lo que permite a los profesionales de la salud y a los investigadores entender cómo se toman las decisiones de clasificación.
 Manejo de datos mixtos: Los árboles de decisión pueden manejar eficazmente conjuntos de datos que contienen tanto variables numéricas como categóricas. Esto es útil en el contexto del diagnóstico del cáncer, donde pueden haber diferentes tipos de características médicas.
 - No requiere normalización de datos: A diferencia de algunos otros algoritmos, como las redes neuronales, los árboles de decisión no requieren que los datos estén normalizados o estandarizados. Esto simplifica el proceso de preparación de datos y hace que el modelo sea más fácil de implementar.
 - Manejo natural de características irrelevantes: Los árboles de decisión tienden a ignorar las características irrelevantes en el proceso de construcción del árbol. Esto significa que pueden manejar conjuntos de datos con características redundantes o irrelevantes sin necesidad de preprocesamiento adicional.
 - Capacidad de manejar conjuntos de datos desequilibrados: Los árboles de decisión pueden ser robustos frente a conjuntos de datos desequilibrados, donde una clase puede ser significativamente más frecuente que otra. Esto es útil en el contexto del diagnóstico del cáncer, donde las muestras de cáncer pueden ser mucho menos frecuentes que las muestras no cancerosas.
 - Buena generalización: Aunque los árboles de decisión tienden a ser propensos al sobreajuste, se pueden aplicar técnicas como la poda del árbol, la limitación de la profundidad del árbol y la especificación de un número mínimo de muestras por hoja para mejorar la generalización del modelo.
-# PROCEDIMIENTO DEL MODELO:
+## PROCEDIMIENTO DEL MODELO:
 Importación de bibliotecas: Se importan las bibliotecas necesarias, incluyendo train_test_split para dividir los datos, DecisionTreeClassifier para el modelo de árbol de decisión, accuracy_score para calcular la precisión del modelo, classification_report para obtener un informe detallado de la clasificación, confusion_matrix para calcular las matrices de confusión y seaborn y matplotlib para visualizar las matrices de confusión.
 División de datos: Se dividen los datos en conjuntos de entrenamiento y prueba utilizando train_test_split(). El conjunto de prueba es el 20% de los datos totales, y se establece una semilla (random_state) para garantizar que la división sea reproducible.
 Inicialización del modelo de árbol de decisión: Se inicializa un modelo de árbol de decisión utilizando DecisionTreeClassifier().
