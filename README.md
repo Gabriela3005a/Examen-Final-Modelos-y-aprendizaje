@@ -49,17 +49,17 @@ El modelo Random Forest comúnmente es utilizado en problemas de clasificación 
 - Buena para conjuntos de datos linealmente separables: Si los datos son linealmente separables, es decir, si se pueden separar utilizando una línea recta en el espacio de características, la regresión logística puede ser muy efectiva.
 - Manejo natural de probabilidades: La regresión logística produce predicciones en forma de probabilidades, lo que facilita la interpretación y la toma de decisiones basadas en umbrales de probabilidad.
 ## PROCEDIMIENTO DEL MODELO:
-Importaciones de bibliotecas: Importamos las bibliotecas necesarias para el análisis de datos, la construcción del modelo y la evaluación del rendimiento, incluyendo Scikit-learn, Pandas y Matplotlib.
-Definición de características y etiquetas: Se definen las características (X) como todas las columnas excepto 'ID number' y 'Diagnosis', y las etiquetas (y) como la columna 'Diagnosis' del conjunto de datos.
-División de datos en conjuntos de entrenamiento y prueba: Se utilizan train_test_split() para dividir los datos en conjuntos de entrenamiento y prueba en una proporción del 80% para entrenamiento y 20% para pruebas. Esto proporciona datos independientes para entrenar y evaluar el modelo.
-Inicialización y entrenamiento del modelo de regresión logística: Se inicializa un objeto de regresión logística utilizando LogisticRegression() y se entrena el modelo con los datos de entrenamiento utilizando fit().
-Predicciones en datos de prueba: Se realizan predicciones en los datos de prueba utilizando predict() y se almacenan en y_pred.
-Transformación de etiquetas categóricas a valores numéricos: Las etiquetas categóricas 'M' (maligno) y 'B' (benigno) se convierten en valores numéricos 1 y 0, respectivamente, para calcular métricas de evaluación.
-Cálculo de métricas de evaluación: Se calculan varias métricas de evaluación del rendimiento del modelo, incluyendo precisión, recall, puntaje F1, área bajo la curva ROC (ROC AUC) y precisión (accuracy). Estas métricas proporcionan una evaluación completa del rendimiento del modelo.
-Impresión de métricas de evaluación: Se imprimen las métricas de evaluación calculadas para evaluar el rendimiento del modelo.
+- Importaciones de bibliotecas: Importamos las bibliotecas necesarias para el análisis de datos, la construcción del modelo y la evaluación del rendimiento, incluyendo Scikit-learn, Pandas y Matplotlib.
+- Definición de características y etiquetas: Se definen las características (X) como todas las columnas excepto 'ID number' y 'Diagnosis', y las etiquetas (y) como la columna 'Diagnosis' del conjunto de datos.
+- División de datos en conjuntos de entrenamiento y prueba: Se utilizan train_test_split() para dividir los datos en conjuntos de entrenamiento y prueba en una proporción del 80% para entrenamiento y 20% para pruebas. Esto proporciona datos independientes para entrenar y evaluar el modelo.
+- Inicialización y entrenamiento del modelo de regresión logística: Se inicializa un objeto de regresión logística utilizando LogisticRegression() y se entrena el modelo con los datos de entrenamiento utilizando fit().
+- Predicciones en datos de prueba: Se realizan predicciones en los datos de prueba utilizando predict() y se almacenan en y_pred.
+- Transformación de etiquetas categóricas a valores numéricos: Las etiquetas categóricas 'M' (maligno) y 'B' (benigno) se convierten en valores numéricos 1 y 0, respectivamente, para calcular métricas de evaluación.
+- Cálculo de métricas de evaluación: Se calculan varias métricas de evaluación del rendimiento del modelo, incluyendo precisión, recall, puntaje F1, área bajo la curva ROC (ROC AUC) y precisión (accuracy). Estas métricas proporcionan una evaluación completa del rendimiento del modelo.
+- Impresión de métricas de evaluación: Se imprimen las métricas de evaluación calculadas para evaluar el rendimiento del modelo.
 “En este caso, la precisión es del 97.56%, lo que significa que el 97.56% de los casos clasificados como positivos por el modelo realmente tienen cáncer.”
-Obtención de matrices de confusión: Se obtienen matrices de confusión tanto para el conjunto de entrenamiento como para el conjunto de prueba utilizando confusion_matrix().
-Visualización de matrices de confusión: Se visualizan las matrices de confusión usando heatmap() de Seaborn para proporcionar una representación gráfica de las predicciones del modelo en comparación con las etiquetas reales.
+- Obtención de matrices de confusión: Se obtienen matrices de confusión tanto para el conjunto de entrenamiento como para el conjunto de prueba utilizando confusion_matrix().
+- Visualización de matrices de confusión: Se visualizan las matrices de confusión usando heatmap() de Seaborn para proporcionar una representación gráfica de las predicciones del modelo en comparación con las etiquetas reales.
 
 # Nº 3 RED NEURONAL 
 ## RAZONES DEL USO DEL MODELO:
@@ -76,19 +76,19 @@ convolucionales (CNN) para procesar imágenes médicas o redes neuronales recurr
 - Aprendizaje jerárquico y abstracción de características: Las redes neuronales pueden aprender automáticamente características jerárquicas y abstracciones de los datos, lo que les permite identificar características relevantes para la predicción del cáncer sin necesidad de una ingeniería de características manual.
 - Regularización y prevención del sobreajuste: Las redes neuronales pueden aplicar técnicas de regularización como la disminución del aprendizaje, la eliminación de características y el abandono para prevenir el sobreajuste y mejorar la generalización del modelo.
 ## PROCEDIMIENTO DEL MODELO:
-Importación de bibliotecas: Se importan las bibliotecas necesarias, incluyendo Keras, TensorFlow, Matplotlib y Scikit-learn.
-Eliminación de columnas irrelevantes: Se elimina la columna 'ID number', ya que no es relevante para el modelo.
-Codificación de etiquetas categóricas: Se utiliza LabelEncoder para convertir la columna 'Diagnosis' en valores numéricos.
-División de datos: Se dividen los datos en características (X) y etiquetas (y), y luego en conjuntos de entrenamiento y prueba utilizando train_test_split().
-Escalado de características: Se escalan las características utilizando StandardScaler() para normalizarlas.
-Construcción del modelo de red neuronal: Se crea un modelo secuencial (Sequential) de Keras.
-Se agregan capas densas (Dense) con funciones de activación ReLU y sigmoide. La capa de entrada (input_shape) tiene el mismo número de características que los datos de entrada.
-Compilación del modelo: Se compila el modelo especificando el optimizador (adam), la función de pérdida (binary_crossentropy) y las métricas (accuracy).
-Entrenamiento del modelo: El modelo se entrena con los datos de entrenamiento utilizando fit(), especificando el número de épocas y el tamaño del lote.
-Evaluación del modelo en el conjunto de prueba: Se evalúa el modelo en el conjunto de prueba utilizando evaluate(), y se calcula la pérdida y la precisión del modelo.
+- Importación de bibliotecas: Se importan las bibliotecas necesarias, incluyendo Keras, TensorFlow, Matplotlib y Scikit-learn.
+- Eliminación de columnas irrelevantes: Se elimina la columna 'ID number', ya que no es relevante para el modelo.
+- Codificación de etiquetas categóricas: Se utiliza LabelEncoder para convertir la columna 'Diagnosis' en valores numéricos.
+- División de datos: Se dividen los datos en características (X) y etiquetas (y), y luego en conjuntos de entrenamiento y prueba utilizando train_test_split().
+- Escalado de características: Se escalan las características utilizando StandardScaler() para normalizarlas.
+- Construcción del modelo de red neuronal: Se crea un modelo secuencial (Sequential) de Keras.
+- Se agregan capas densas (Dense) con funciones de activación ReLU y sigmoide. La capa de entrada (input_shape) tiene el mismo número de características que los datos de entrada.
+- Compilación del modelo: Se compila el modelo especificando el optimizador (adam), la función de pérdida (binary_crossentropy) y las métricas (accuracy).
+- Entrenamiento del modelo: El modelo se entrena con los datos de entrenamiento utilizando fit(), especificando el número de épocas y el tamaño del lote.
+- Evaluación del modelo en el conjunto de prueba: Se evalúa el modelo en el conjunto de prueba utilizando evaluate(), y se calcula la pérdida y la precisión del modelo.
 “En este caso, la precisión del modelo en el conjunto de prueba es del 97.37%, lo que significa que el 97.37% de las predicciones del modelo en el conjunto de prueba son correctas”. 
-Visualización de matrices de confusión: Se calculan las matrices de confusión para el conjunto de entrenamiento y prueba utilizando confusion_matrix().
-Las matrices de confusión:  se visualizan utilizando heatmap() de Seaborn para proporcionar una representación gráfica de las predicciones del modelo en comparación con las etiquetas reales.
+- Visualización de matrices de confusión: Se calculan las matrices de confusión para el conjunto de entrenamiento y prueba utilizando confusion_matrix().
+- Las matrices de confusión:  se visualizan utilizando heatmap() de Seaborn para proporcionar una representación gráfica de las predicciones del modelo en comparación con las etiquetas reales.
 
 # Nº 4 DECISIONTREECLASSIFIER
 ## RAZONES DEL USO DEL MODELO:
@@ -99,15 +99,15 @@ Manejo de datos mixtos: Los árboles de decisión pueden manejar eficazmente con
 - Capacidad de manejar conjuntos de datos desequilibrados: Los árboles de decisión pueden ser robustos frente a conjuntos de datos desequilibrados, donde una clase puede ser significativamente más frecuente que otra. Esto es útil en el contexto del diagnóstico del cáncer, donde las muestras de cáncer pueden ser mucho menos frecuentes que las muestras no cancerosas.
 - Buena generalización: Aunque los árboles de decisión tienden a ser propensos al sobreajuste, se pueden aplicar técnicas como la poda del árbol, la limitación de la profundidad del árbol y la especificación de un número mínimo de muestras por hoja para mejorar la generalización del modelo.
 ## PROCEDIMIENTO DEL MODELO:
-Importación de bibliotecas: Se importan las bibliotecas necesarias, incluyendo train_test_split para dividir los datos, DecisionTreeClassifier para el modelo de árbol de decisión, accuracy_score para calcular la precisión del modelo, classification_report para obtener un informe detallado de la clasificación, confusion_matrix para calcular las matrices de confusión y seaborn y matplotlib para visualizar las matrices de confusión.
-División de datos: Se dividen los datos en conjuntos de entrenamiento y prueba utilizando train_test_split(). El conjunto de prueba es el 20% de los datos totales, y se establece una semilla (random_state) para garantizar que la división sea reproducible.
-Inicialización del modelo de árbol de decisión: Se inicializa un modelo de árbol de decisión utilizando DecisionTreeClassifier().
-Entrenamiento del modelo: Se entrena el modelo utilizando los datos de entrenamiento (X_train y y_train) mediante el método fit().
-Predicciones en el conjunto de prueba: Se realizan predicciones en el conjunto de prueba (X_test) utilizando el método predict().
-Evaluación del rendimiento del modelo: Se calcula la precisión del modelo comparando las etiquetas verdaderas (y_test) con las predicciones utilizando accuracy_score().
+- Importación de bibliotecas: Se importan las bibliotecas necesarias, incluyendo train_test_split para dividir los datos, DecisionTreeClassifier para el modelo de árbol de decisión, accuracy_score para calcular la precisión del modelo, classification_report para obtener un informe detallado de la clasificación, confusion_matrix para calcular las matrices de confusión y seaborn y matplotlib para visualizar las matrices de confusión.
+- División de datos: Se dividen los datos en conjuntos de entrenamiento y prueba utilizando train_test_split(). El conjunto de prueba es el 20% de los datos totales, y se establece una semilla (random_state) para garantizar que la división sea reproducible.
+- Inicialización del modelo de árbol de decisión: Se inicializa un modelo de árbol de decisión utilizando DecisionTreeClassifier().
+- Entrenamiento del modelo: Se entrena el modelo utilizando los datos de entrenamiento (X_train y y_train) mediante el método fit().
+- Predicciones en el conjunto de prueba: Se realizan predicciones en el conjunto de prueba (X_test) utilizando el método predict().
+- Evaluación del rendimiento del modelo: Se calcula la precisión del modelo comparando las etiquetas verdaderas (y_test) con las predicciones utilizando accuracy_score().
 “Es el valor de la precisión del modelo, que en este caso es aproximadamente 93.86%. Esto significa que alrededor del 93.86% de las muestras en el conjunto de prueba fueron clasificadas correctamente por el modelo de árbol de decisión. En otras palabras, el modelo tiene una tasa de predicciones correctas del 93.86%.”
-Reporte de clasificación: Se genera un reporte detallado de la clasificación utilizando classification_report(). Este reporte proporciona métricas como precisión, recuperación (recall), puntaje F1 y soporte para cada clase.
-Matrices de confusión: Se calculan las matrices de confusión para los conjuntos de entrenamiento y prueba utilizando confusion_matrix().
+- Reporte de clasificación: Se genera un reporte detallado de la clasificación utilizando classification_report(). Este reporte proporciona métricas como precisión, recuperación (recall), puntaje F1 y soporte para cada clase.
+- Matrices de confusión: Se calculan las matrices de confusión para los conjuntos de entrenamiento y prueba utilizando confusion_matrix().
 
 # Conclusiones:
 Todos los modelos muestran un buen rendimiento en términos de precisión, pero cada uno tiene sus propias fortalezas y debilidades. La elección del modelo más adecuado depende mucho de más condiciones como la importancia de minimizar los falsos positivos versus los falsos negativos en el contexto clínico específico, así como la capacidad de interpretación del modelo y la eficiencia computacional. Pero el mejor modelo justificando la respuesta en base a las matrices de confusión que aparecen al evaluar el error en training y en test.
