@@ -27,18 +27,18 @@ El modelo Random Forest comúnmente es utilizado en problemas de clasificación 
 - Tolerancia a datos desequilibrados: En problemas de diagnóstico de cáncer, es común que los datos estén desequilibrados, es decir, que haya muchas más muestras de una clase que de la otra. Random Forest puede manejar esta desigualdad de manera efectiva y producir resultados equilibrados sin requerir técnicas de reequilibrio de datos.
 - Identificación de características importantes: Random Forest puede proporcionar una medida de la importancia de cada característica en la clasificación, lo que puede ayudar a los médicos y expertos en salud a comprender qué características son más relevantes para el diagnóstico del cáncer.
 ## PROCEDIMIENTO DEL MODELO:
-Importaciones de bibliotecas: Importamos las bibliotecas necesarias para el análisis de datos y el modelado predictivo, incluyendo herramientas como Pandas, Scikit-learn, Imbalanced-learn (para la generación de datos sintéticos en el manejo de clases desbalanceadas) y Matplotlib y Seaborn para la visualización.
-División de datos: Las características (X) y las etiquetas (y) se definen utilizando el conjunto de datos. Las características son todas las columnas excepto 'ID number' y 'Diagnosis', mientras que las etiquetas son la columna 'Diagnosis'.
-Los datos se dividen en conjuntos de entrenamiento y prueba utilizando train_test_split(). Se asigna el 80% de los datos para entrenamiento y el 20% restante para pruebas.
-Imputación y normalización de datos: Se utiliza SimpleImputer para reemplazar los valores faltantes en las características con la media de esa característica en el conjunto de entrenamiento.
-Luego, se normalizan las características utilizando StandardScaler para asegurarse de que todas estén en la misma escala.
-Ajuste de hiperparámetros con GridSearchCV: Se define un espacio de hiperparámetros para el clasificador de Random Forest, que incluye el número de estimadores, la profundidad máxima del árbol y el número mínimo de muestras requeridas para dividir un nodo interno.
-Se utiliza GridSearchCV para encontrar la combinación óptima de hiperparámetros mediante validación cruzada en el conjunto de entrenamiento.
-Balanceo de clases con SMOTE: Se aplica SMOTE (Técnica de Sobremuestreo de Minorías Sintéticas) solo en el conjunto de entrenamiento para abordar el problema de desequilibrio de clases, generando muestras sintéticas de la clase minoritaria.
-Entrenamiento del modelo y validación cruzada: Se entrena el modelo de Random Forest con los datos balanceados y normalizados del conjunto de entrenamiento, también se realiza la validación cruzada para evaluar el rendimiento del modelo en términos de precisión utilizando el conjunto de entrenamiento.
-Evaluación del modelo en el conjunto de prueba: Se realizan predicciones en el conjunto de prueba y se evalúan utilizando métricas como precisión, puntaje F1 y AUC-ROC.
+- Importaciones de bibliotecas: Importamos las bibliotecas necesarias para el análisis de datos y el modelado predictivo, incluyendo herramientas como Pandas, Scikit-learn, Imbalanced-learn (para la generación de datos sintéticos en el manejo de clases desbalanceadas) y Matplotlib y Seaborn para la visualización.
+- División de datos: Las características (X) y las etiquetas (y) se definen utilizando el conjunto de datos. Las características son todas las columnas excepto 'ID number' y 'Diagnosis', mientras que las etiquetas son la columna 'Diagnosis'.
+- Los datos se dividen en conjuntos de entrenamiento y prueba utilizando train_test_split(). Se asigna el 80% de los datos para entrenamiento y el 20% restante para pruebas.
+- Imputación y normalización de datos: Se utiliza SimpleImputer para reemplazar los valores faltantes en las características con la media de esa característica en el conjunto de entrenamiento.
+- Luego, se normalizan las características utilizando StandardScaler para asegurarse de que todas estén en la misma escala.
+- Ajuste de hiperparámetros con GridSearchCV: Se define un espacio de hiperparámetros para el clasificador de Random Forest, que incluye el número de estimadores, la profundidad máxima del árbol y el número mínimo de muestras requeridas para dividir un nodo interno.
+- Se utiliza GridSearchCV para encontrar la combinación óptima de hiperparámetros mediante validación cruzada en el conjunto de entrenamiento.
+- Balanceo de clases con SMOTE: Se aplica SMOTE (Técnica de Sobremuestreo de Minorías Sintéticas) solo en el conjunto de entrenamiento para abordar el problema de desequilibrio de clases, generando muestras sintéticas de la clase minoritaria.
+- Entrenamiento del modelo y validación cruzada: Se entrena el modelo de Random Forest con los datos balanceados y normalizados del conjunto de entrenamiento, también se realiza la validación cruzada para evaluar el rendimiento del modelo en términos de precisión utilizando el conjunto de entrenamiento.
+- Evaluación del modelo en el conjunto de prueba: Se realizan predicciones en el conjunto de prueba y se evalúan utilizando métricas como precisión, puntaje F1 y AUC-ROC.
 “Las métricas indican que el modelo tiene una precisión del 95.45%, un puntaje F1 del 96.55% y un AUC-ROC del 97.43%, lo que sugiere un buen rendimiento en la clasificación de los casos de cáncer en el conjunto de prueba.”
-Se visualizan las matrices de confusión para el conjunto de entrenamiento y prueba.
+- Se visualizan las matrices de confusión para el conjunto de entrenamiento y prueba.
 
 # Nº 2 REGRESION LOGISTICA 
 ## RAZONES DEL USO DEL MODELO:
