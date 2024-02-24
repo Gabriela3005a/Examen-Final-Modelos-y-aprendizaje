@@ -61,7 +61,7 @@ El modelo Random Forest comúnmente es utilizado en problemas de clasificación 
 - Obtención de matrices de confusión: Se obtienen matrices de confusión tanto para el conjunto de entrenamiento como para el conjunto de prueba utilizando confusion_matrix().
 - Visualización de matrices de confusión: Se visualizan las matrices de confusión usando heatmap() de Seaborn para proporcionar una representación gráfica de las predicciones del modelo en comparación con las etiquetas reales.
 
-# Nº 3 RED NEURONAL 
+# Nº 3 RED NEURONAL
 ## RAZONES DEL USO DEL MODELO:
 - Capacidad para aprender representaciones complejas: Las redes neuronales pueden aprender representaciones complejas de los datos, lo que les permite
 capturar relaciones no lineales y patrones sutiles en los conjuntos de datos médicos. Esto es crucial en problemas como la detección de cáncer, donde
