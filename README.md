@@ -124,6 +124,8 @@ Todos los modelos muestran un buen rendimiento en términos de precisión, pero 
 - Menor cantidad de falsos negativos: En un problema de detección de cáncer, los falsos negativos (clasificar incorrectamente a alguien como no portador de cáncer cuando en realidad lo tienen) son especialmente preocupantes, ya que podrían llevar a la falta de tratamiento oportuno para los pacientes que realmente lo necesitan. Random Forest tuvo solo 1 falso negativo, lo que indica una capacidad alta para identificar correctamente los casos de cáncer.
 - Alta precisión: Aunque tanto Random Forest como Regresión Logística tienen altas precisiones, Random Forest logra una precisión del 95.45%, lo que significa que el 95.45% de las predicciones son correctas. Esta alta precisión demuestra la capacidad del modelo para realizar clasificaciones precisas en los datos de prueba.
 - Menor riesgo de sobreajuste: Random Forest es conocido por su robustez frente al sobreajuste. Esto significa que es menos probable que el modelo se ajuste demasiado a los datos de entrenamiento y tenga un rendimiento deficiente en datos nuevos. Su capacidad para reducir el sobreajuste es crucial para garantizar que el modelo generalice bien a datos no vistos.
+
+  
 En resumen, Random Forest ofrece un equilibrio entre precisión, capacidad para manejar características complejas, robustez frente al sobreajuste y capacidad para manejar datos desequilibrados. Por lo tanto, basándonos en las métricas y considerando la naturaleza del problema de detección de cáncer, el modelo Random Forest es la mejor opción para este caso.
 
 
