@@ -86,7 +86,7 @@ convolucionales (CNN) para procesar imágenes médicas o redes neuronales recurr
 - Compilación del modelo: Se compila el modelo especificando el optimizador (adam), la función de pérdida (binary_crossentropy) y las métricas (accuracy).
 - Entrenamiento del modelo: El modelo se entrena con los datos de entrenamiento utilizando fit(), especificando el número de épocas y el tamaño del lote.
 - Evaluación del modelo en el conjunto de prueba: Se evalúa el modelo en el conjunto de prueba utilizando evaluate(), y se calcula la pérdida y la precisión del modelo.
-“En este caso, la precisión del modelo en el conjunto de prueba es del 97.37%, lo que significa que el 97.37% de las predicciones del modelo en el conjunto de prueba son correctas”. 
+“En este caso, la precisión del modelo en el conjunto de prueba es del 96.49%, lo que significa que el 96.49% de las predicciones del modelo en el conjunto de prueba son correctas”. 
 - Visualización de matrices de confusión: Se calculan las matrices de confusión para el conjunto de entrenamiento y prueba utilizando confusion_matrix().
 - Las matrices de confusión:  se visualizan utilizando heatmap() de Seaborn para proporcionar una representación gráfica de las predicciones del modelo en comparación con las etiquetas reales.
 
