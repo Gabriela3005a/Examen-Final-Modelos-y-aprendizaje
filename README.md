@@ -113,9 +113,9 @@ Manejo de datos mixtos: Los árboles de decisión pueden manejar eficazmente con
 Todos los modelos muestran un buen rendimiento en términos de precisión, pero cada uno tiene sus propias fortalezas y debilidades. La elección del modelo más adecuado depende mucho de más condiciones como la importancia de minimizar los falsos positivos versus los falsos negativos en el contexto clínico específico, así como la capacidad de interpretación del modelo y la eficiencia computacional. Pero el mejor modelo justificando la respuesta en base a las matrices de confusión que aparecen al evaluar el error en training y en test.
 
 
-•	Red Neuronal también tuvo un número bajo de falsos negativos (FN), lo que significa que el modelo también es bueno y logra identifican a los pacientes con cáncer correctamente, su presión del modelo también fue alto con 97.37%
+•	Red Neuronal también tuvo un número bajo de falsos negativos (FN), lo que significa que el modelo también es bueno y logra identifican a los pacientes con cáncer correctamente, su presión del modelo también fue alto con 96.49%
 
-•	Regresión Logística tiene un rendimiento similar a Random Forest y Red Neuronal aunque tuvo un poco más de falso negativos, pero su presión fue muy buena también con 97.56%  
+•	Regresión Logística tiene un rendimiento similar a Random Forest y Red Neuronal aunque tuvo un poco más de falso negativos lo que afecta a la predicción de cáncer, pero su presión fue muy buena también con 97.56%  
 
 •	DecisionTreeClassifier tiene el peor desempeño en términos de falsos negativos, lo que significa que identifica incorrectamente más casos de cáncer como negativos con una precisión del 93.86%
 
